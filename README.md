@@ -17,4 +17,4 @@ Learn React, Redux, Node.js, MongoDB, GraphQL and TypeScript in one go! This cou
 - Part 8: GraphQL
 - Part 9: Typescript
 
-Powered by University of Helsinki and Houston Inc. [https://fullstackopen.com/en](https://fullstackopen.com/en)
+Powered by University of Helsinki and Houston Inc.
