@@ -1,4 +1,7 @@
 import React, { useState } from 'react'
+import Filter from './components/Filter';
+// import PersonForm from './components/PersonForm';
+// import Persons from './components/Persons';
 
 const App = () => {
   const [persons, setPersons] = useState([
@@ -12,6 +15,9 @@ const App = () => {
   const [ newNumber, setNewNumber ] = useState('')
   const [ newSearch, setNewSearch] = useState('');
 
+  const filterPerson = (e) => {
+    setNewSearch(e.target.value)
+  }
   const displayPerson = newSearch
   ? persons.filter(person => person.name.toLowerCase().search(newSearch.toLowerCase()) !== -1)
   : persons;
@@ -31,8 +37,7 @@ const App = () => {
   return (
     <div>
       <h2>Phonebook</h2>
-      Filter shown with 
-      <input value={newSearch} onChange={(e) => setNewSearch(e.target.value)} />
+      <Filter value={newSearch} onChange={filterPerson}/>
       <form onSubmit={formSubmit}>
         <div>
           <h2>Add a new number</h2>  
